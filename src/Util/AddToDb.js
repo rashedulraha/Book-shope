@@ -22,4 +22,4 @@ const addToStorBd = (id) => {
   }
 };
 
-export { addToStorBd };
+export { addToStorBd, getStoreBook };
