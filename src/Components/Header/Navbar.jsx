@@ -4,14 +4,14 @@ import Container from "../Container";
 const Navbar = () => {
   const links = (
     <>
-      {/* <li className="mr-2">Home</li>
-      <li>About</li> */}
-
       <Link to={"/"} className="mr-3">
         Home
       </Link>
 
-      <Link to={"/about"}>About</Link>
+      <Link className="mr-3 " to={"/about"}>
+        About
+      </Link>
+      <Link to={"/readList"}>Read List</Link>
     </>
   );
   return (
