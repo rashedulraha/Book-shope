@@ -1,8 +1,6 @@
 import React from "react";
 
 const ReadBookList = ({ singleBook }) => {
-  console.log(singleBook);
-
   const { image, bookName, review, totalPages, rating } = singleBook;
   return (
     <>

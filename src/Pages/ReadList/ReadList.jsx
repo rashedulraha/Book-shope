@@ -21,7 +21,6 @@ const ReadList = () => {
     );
 
     setReadList(myReadList);
-    console.log(myReadList);
   }, [booksData]);
 
   const handleClickTOSort = (type) => {

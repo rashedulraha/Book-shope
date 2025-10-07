@@ -2,6 +2,13 @@ import { useLoaderData, useParams } from "react-router";
 import Container from "../../Components/Container";
 import { addToStorBd } from "../../Util/AddToDb";
 
+// switch alert this page
+
+import Swal from "sweetalert2";
+import withReactContent from "sweetalert2-react-content";
+
+const MySwal = withReactContent(Swal);
+
 const BookDetails = () => {
   const { id } = useParams();
   const convertNumberOfId = parseInt(id);
@@ -14,6 +21,12 @@ const BookDetails = () => {
   const { image, bookName, review } = singBookData || {};
 
   const handleClickMarkAsRead = (id) => {
+    MySwal.fire({
+      title: "Mark as read add!",
+      icon: "success",
+      draggable: true,
+    });
+
     addToStorBd(id);
   };
 

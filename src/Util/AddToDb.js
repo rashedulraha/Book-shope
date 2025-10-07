@@ -1,3 +1,5 @@
+import { ToastContainer, toast } from "react-toastify";
+
 const getStoreBook = () => {
   const storeBook = localStorage.getItem("readList");
 
@@ -11,10 +13,11 @@ const getStoreBook = () => {
 
 const addToStorBd = (id) => {
   const bookData = getStoreBook();
-  console.log(bookData, id);
 
   if (bookData.includes(id)) {
-    alert("This id is already exit");
+    toast("This id is already exit");
+
+    <ToastContainer />;
   } else {
     bookData.push(id);
     const data = JSON.stringify(bookData);
